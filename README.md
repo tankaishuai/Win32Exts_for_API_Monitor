@@ -92,15 +92,15 @@ API Monitor 的API配置是以XML形式保存的，例如：
  
 比较复杂，Win32Exts_for_API_Monitor 仅仅只需要在win32exts.ini 中按如下格式记录参数类型符即可：
 
-## index=[fake_ret_val=或*]module!function,[^][in_args][,out_args]
+## [fake_ret_val=或*]module!function,[^][in_args][,out_args]
 
 或
 
-## index=[fake_ret_val=或*]module+offset,[^][in_args][,out_args]
+## [fake_ret_val=或*]module+offset,[^][in_args][,out_args]
 
 或
 
-## index=[fake_ret_val=或*]virtual_addr,[^][in_args][,out_args]
+## [fake_ret_val=或*]virtual_addr,[^][in_args][,out_args]
 
 
 其中 [] 表示可选参数，
