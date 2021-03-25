@@ -12,6 +12,7 @@ if "%1" == "" (
 	set pa=%~dp0
 	pushd "!pa!"
 	echo using "!cd!\win32exts.dll"
+	echo %1 %2
 	rundll32 "!cd!\win32exts.dll",MyAnyHookApi_RunDll32 --hwnd=%1 %2
 	popd
 )
