@@ -179,6 +179,7 @@ $ ： 文件handle
 
 " : FILETIME *
 
+
 [struct_name] : 自定义结构体，结构体 struct_name 的各个成员需定义在：
 
 win32exts.ini 的 [StructFmt] 下面。支持结构体各种嵌套，同时对于循环链表也能够正确的输出。
@@ -201,7 +202,14 @@ win32exts.ini 的 [StructFmt] 下面。支持结构体各种嵌套，同时对�
 
 ## 2、	开始监控进程
 
-执行批处理：
+（方法1）直接打开：API_Monitor_For_GUI.exe
+
+![api_demo](https://github.com/tankaishuai/Win32Exts_for_API_Monitor/blob/master/img/api_monitor_10.png)
+
+如果只是需要监控某浏览器，可以用：API_Monitor_For_Browser.exe
+
+
+（方法2）执行批处理：
 
 Api_Monitor  16进制的进程窗口句柄
 
@@ -210,7 +218,7 @@ Api_Monitor  16进制的进程窗口句柄
 
 rundll32 "%cd%\win32exts.dll",MyAnyHookApi_RunDll32 --hwnd=16进制的进程窗口句柄
 
-即可开始监控。
+即可开始监控（此方法仅限于32位程序）。
 
 
 对于无窗口进程，则可以使用下列命令行：
@@ -257,3 +265,6 @@ bool  MyAnyHookDisplayCall(
 
 
 即可实现自定义的参数类型解码输出。如有需要，具体开发细节可联系作者。   
+
+QQ：452731600。
+
